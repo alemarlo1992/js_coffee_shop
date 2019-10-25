@@ -55,8 +55,18 @@
 
     // Set these variables to their DOM elements
 
-    const coffeeImage;
-    const revenueMessage;
+    const coffeeImage = document.querySelector('#coffee-image');  // coffeeImage is an HTML element
+    coffeeImage.setAttribute('src', 'static/coffee_beans.jpg');
+
+
+    // when user clicks on the coffee pic, this func gets called
+    const makeCoffee = () => {
+      coffeeImage.setAttribute('src', 'static/coffee_mug.jpg');
+    }
+
+    coffeeImage.addEventListener('click', makeCoffee);
+
+    // const revenueMessage;
 
     // use this JavaScript object in further study step
 
